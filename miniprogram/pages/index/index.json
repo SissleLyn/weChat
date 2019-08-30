@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-cell-group": "../../style/widget/cell-group/index",
+    "i-cell": "../../style/widget/cell/index",
+    "i-tab-bar": "../../style/widget/tab-bar/index",
+    "i-tab-bar-item": "../../style/widget/tab-bar-item/index",
+    "i-icon": "../../style/widget/icon/index"
+  }
+}

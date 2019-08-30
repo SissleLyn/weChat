@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="indexPage">
+  <view class="userBg" style="background: url(images/bg.png) no-repeat bottom /contain;">
+    <view class="userInfo">
+      <!-- <open-data type="userAvatarUrl" class="userLogo"></open-data>
+      <open-data type="userNickName" lang="zh_CN" class="userName"></open-data>，欢迎进入会议管理程序 -->
+    </view>
+  </view>
+  <view class="swiperWrapper">
+    <swiper previous-margin="10px" next-margin="30px" autoplay="{{autoplay}}">
+      <block wx:for="{{toConfirm}}" wx:key="{{index}}">
+        <swiper-item style="width:300px;">
+          <view class="slideModal" width="100%">
+            <view class="slideStatus">
+              {{item.status}}会议
+              <text>more+</text>
+            </view>
+            <view class="slideName">
+              {{item.name}}
+            </view>
+            <view class="slideContent">
+              <text class="iconfont icon-time"></text>{{item.duration}}
+            </view>
+            <view class="slideContent">
+              <text class="iconfont icon-address"></text>{{item.room}}
+            </view>
+            <view class="slideOperation">
+              <text>不参与会议</text>
+              <text class="red">参与会议</text>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="joinList">
+    <view class="joinStatus">
+      待参与会议
+      <text>more+</text>
+    </view>
+    <block wx:for="{{toJoin}}" wx:key="{{index}}">
+      <i-cell-group i-class="joinListUl">
+        <i-cell i-class="joinListli" title="{{item.name}}" value="{{item.status}}"></i-cell>
+        <i-cell i-class="joinListli" title="时间：{{item.duration}}"></i-cell>
+        <i-cell i-class="joinListli" title="地点：{{item.room}}"></i-cell>
+      </i-cell-group>
+    </block>
+  </view>
+  <i-tab-bar i-class="footerBar" current="{{ current }}" color="#555555" bindchange="handleChange" fixed="true">
+    <i-tab-bar-item key="todo" icon="activity" current-icon="activity_fill" title="首页"></i-tab-bar-item>
+    <i-icon type="add" size="28" color="#ffffff" i-class="newAdd" />
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+  </i-tab-bar>
+  <!-- <button class="newAdd" bindtap="addMeeting">新增会议</button> -->
+</view>

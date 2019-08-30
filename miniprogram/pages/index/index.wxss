@@ -1,0 +1,146 @@
+/* miniprogram/pages/index/index.wxss */
+
+.indexPage .userBg {
+  padding-bottom: 25px;
+}
+
+.indexPage .userInfo {
+  color: #fff;
+  text-align: right;
+  font-size: 14px;
+  padding: 10px;
+  background: #d22f3c;
+  height: 40px;
+}
+
+.indexPage .userInfo image {
+  width: 100%;
+}
+
+.indexPage .userInfo .userLogo {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+/* 待确认会议轮播 */
+
+.swiperWrapper {
+  margin-top: -70px;
+  /* margin-left: -20px; */
+}
+
+.swiperWrapper swiper {
+  height: 160px;
+}
+
+.swiperWrapper swiper-item + swiper-item {
+  padding-left: 5px;
+}
+
+.swiperWrapper swiper .slideModal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow:1px 1px 2px rgba(0,0,0,.1),-1px -1px 2px rgba(0,0,0,.1);
+}
+
+.swiperWrapper swiper .slideStatus {
+  color: #333;
+}
+
+.swiperWrapper swiper .slideStatus::before {
+  display: inline-block;
+  content: "";
+  width: 3px;
+  height: 15px;
+  background: #fe8300;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.swiperWrapper swiper .slideStatus text {
+  float: right;
+  color: #999;
+  font-size: 12px;
+}
+
+.swiperWrapper swiper .slideName {
+  text-indent: 10px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.swiperWrapper swiper .slideContent {
+  line-height: 26px;
+  padding-left: 10px;
+}
+
+.swiperWrapper swiper .slideContent .iconfont {
+  color: #7ca8f3;
+  margin-right: 10px;
+}
+
+.swiperWrapper swiper .slideOperation {
+  text-align: right;
+}
+
+.swiperWrapper swiper .slideOperation text {
+  padding: 10px;
+}
+
+/*待参与会议列表*/
+
+.joinList {
+  padding: 10px;
+}
+
+.joinList .joinStatus {
+  line-height: 45px;
+  font-size: 16px;
+}
+
+.joinList .joinStatus text {
+  color: #999;
+  float: right;
+}
+
+.joinListUl{
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #fff;
+  box-shadow:1px 1px 2px rgba(0,0,0,.1),-1px -1px 2px rgba(0,0,0,.1);
+}
+.joinListUl i-cell:nth-child(1) view:nth-child(2) view{
+  line-height: 35px;
+  font-size:16px;
+  color:#333333;
+}
+.joinListUl i-cell:nth-child(1) view:nth-child(3){
+  color:#ff716c;
+}
+.joinListli{
+  padding: 0px !important;
+  color:#666666;
+}
+.joinListli::after{
+  display: none !important;
+}
+
+/*底部footer*/
+.footerBar{
+  border-top:1px solid #dadada;
+}
+.newAdd{
+  background: #d22f3c;
+  border-radius: 50%;
+  padding: 8px;
+  position: relative;
+  top:-25px;
+  z-index: 2;
+}

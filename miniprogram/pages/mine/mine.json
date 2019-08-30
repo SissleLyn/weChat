@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../style/widget/tabs/index",
+    "i-tab": "../../style/widget/tab/index"
+  }
+}
